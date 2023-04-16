@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class="main-content">
+        <div class="justified">
+            <mat-card>
+                <mat-card-title class="disable-selection">{{ text('userProfile') }}</mat-card-title>
+                <button *ngIf="isLoggedIn()" mat-flat-button color="accent" class="selection-button" (click)="disconnect()">
+                    {{ text('disconnect') }}
+                </button>
+                <button *ngIf="isLoggedIn()" mat-flat-button color="accent" class="selection-button" [routerLink]="['/edit-profile']">
+                    {{ text('editProfile') }}
+                </button>
+                <button *ngIf="isLoggedIn()" mat-flat-button color="accent" class="selection-button" [routerLink]="['/statistics']">
+                    {{ text('statistics') }}
+                </button>
+                <button mat-flat-button color="accent" class="selection-button" [routerLink]="['/home']">{{ text('return') }}</button>
+            </mat-card>
+        </div>
+    </div>
+    <app-general-chat-box [style.display]="isChatDocked ? '' : 'none'"></app-general-chat-box>
+</div>

@@ -1,0 +1,36 @@
+<h2>{{ this.text('multiplayerGameConfig') }}</h2>
+<br />
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput autocomplete="off" placeholder="Nom de joueur" [formControl]="oppName" />
+        <mat-hint>{{ this.text('opponentNameHint') }}</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>{{ this.text('opponents') }}</mat-label>
+        <input *ngFor="let player of data.players" matInput [disabled]="true" [value]="player" />
+    </mat-form-field>
+
+    <br />
+    <br />
+    <mat-form-field>
+        <mat-label #bonus>{{ this.text('randomBonus') }} </mat-label>
+        <input matInput [disabled]="true" [value]="randomBonusType" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>{{ this.text('dictionaryOftheGame') }}</mat-label>
+        <input matInput [disabled]="true" [value]="data.dictTitle" [matTooltip]="data.dictTitle" matTooltipPosition="right" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <mat-label>{{ this.text('timePerTurn') }} </mat-label>
+        <input matInput [disabled]="true" value="{{ data.timePerTurn | date: 'm:ss' }} min" />
+    </mat-form-field>
+    <br />
+</mat-dialog-content>
+<br />
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close] (click)="cancel()">{{ this.text('cancel') }}</button>
+    <button mat-button color="primary" [disabled]="!valid" (click)="joinWaitingRoom()">{{ this.text('join') }}</button>
+</mat-dialog-actions>

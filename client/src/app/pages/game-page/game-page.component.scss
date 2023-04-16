@@ -1,0 +1,111 @@
+.big-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: url('^assets/img/game-bg.jpg') no-repeat center top;
+    background-size: 100vw 100vh;
+
+    flex: 1 1 auto;
+
+    position:relative;
+}
+
+app-general-chat-box {
+    flex: 0 0 auto;
+    width: 25%;
+    height: 100%;
+}
+
+.left-side-bar {
+    width: 25%;
+    height: 100%;
+    flex: 0 0 auto;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: flex-start;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    button {
+        padding: 3px;
+        margin: 3px 8px;
+    }
+}
+
+.abandonner {
+    display: flex;
+    justify-content: center;
+    button {
+        width: 60%;
+        background-color: var(--red);
+    }
+}
+
+app-horse {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.card-and-actions {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    position:absolute;
+    left: 15px;
+    bottom: 15px;
+    height: 20vh;
+}
+
+.actions-and-rack {
+    height: 100%;
+    width: 70%;
+}
+
+.blocker {
+    position:fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.horse-reaction {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+app-reaction-choice {
+    margin-bottom: 0;
+    margin-top: auto;
+}

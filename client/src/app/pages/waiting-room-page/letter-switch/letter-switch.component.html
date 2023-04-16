@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="description">
+        {{ UIText.getText('descriptionMiniGame') }}
+    </div>
+    <div class="letters">
+        <app-letter 
+            *ngFor="let letter of shuffledWord; let index = index"
+            (click)="click(index)"
+            [letter]="letter"
+            [ngClass]="{
+                selected: isSelected(index),
+                good: isGood(index),
+                next: isNext(index),
+                pre: isPre(index)
+            }"
+            [style.transform]="move && (index == first || index == second) ? 'translateX('+(index == first ? firstMove : (index == second ? secondMove : '0' ))+') scale(.9, .9)' : ''"
+            [style.transition]="!move && first != -1 && second != -1 ? 'unset' : ''"
+            class="letter"
+        ></app-letter>
+    </div>
+    <div class="points">
+        {{ UIText.getText('current') }} {{ points }} ; {{ UIText.getText('best') }} {{ best }}
+    </div>
+</div>

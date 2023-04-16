@@ -1,0 +1,68 @@
+<mat-tab-group dynamicHeight class="joinRoomForm">
+    <div class="chatRoomsContainer">
+        <mat-tab label="{{ this.text('joinChatroom') }}">
+            <mat-card fxFlex="33%">
+                <div>
+                    <h2 mat-dialog-title>
+                        {{ this.text('existingChatrooms') }}
+                        <mat-icon style="cursor: pointer" (click)="refreshData()"
+                            matTooltip="{{ this.text('refreshList') }}">cached</mat-icon>
+                    </h2>
+                </div>
+
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="term" autocomplete="off"
+                        placeholder="{{ this.text('typeNameToFilter') }}" />
+                </mat-form-field>
+
+                <mat-selection-list #roomID [multiple]="false" [(ngModel)]="selectedValue">
+                    <h4 *ngIf="this.noChatroomMessage !== ''">{{ this.noChatroomMessage }}</h4>
+
+                    <mat-list-option class="conversation" *ngFor="let conversation of chatRooms | filter: term"
+                        [value]="conversation" attr.id="{{ conversation.roomId }}" value="{{ conversation.name }}">
+                        <div class="container-conversation">
+                            <h3 matLine>{{ conversation.name }}</h3>
+
+
+                            <button *ngIf="canEdit(conversation)" mat-icon-button [matMenuTriggerFor]="menu"
+                                class="more-vert">
+                                <mat-icon>more_vert</mat-icon>
+                            </button>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item (click)="onDeleteChatRoom(conversation)">
+                                    <mat-icon>delete</mat-icon><span>Supprimer</span>
+                                </button>
+                            </mat-menu>
+                        </div>
+                    </mat-list-option>
+                </mat-selection-list>
+
+
+            </mat-card>
+
+            <br />
+            <mat-dialog-actions>
+                <button mat-button (click)="cancel()">{{ this.text('cancel') }}</button>
+                <button mat-button (click)="joinRoom(selectedValue)" [disabled]="!selectedValue">{{
+                    this.text('joinChatroom') }}</button>
+            </mat-dialog-actions>
+        </mat-tab>
+    </div>
+
+    <mat-tab label="{{ this.text('createChatroom') }}">
+        <mat-card fxFlex="33%">
+            <mat-dialog-content [formGroup]="chatRoomCreationForm">
+                <mat-form-field>
+                    <input matInput class="form-control" type="text" autocomplete="off"
+                        placeholder="{{ this.text('chatroomName') }}" formControlName="chatRoomName" />
+                </mat-form-field>
+                <mat-error *ngIf="this.nameExistsError !== ''">{{ this.nameExistsError }}</mat-error>
+            </mat-dialog-content>
+            <mat-dialog-actions>
+                <button mat-button (click)="cancel()">{{ this.text('cancel') }}</button>
+                <button mat-button (click)="createChatRoom()" [disabled]="!formValid">{{ this.text('createChatroom')
+                    }}</button>
+            </mat-dialog-actions>
+        </mat-card>
+    </mat-tab>
+</mat-tab-group>

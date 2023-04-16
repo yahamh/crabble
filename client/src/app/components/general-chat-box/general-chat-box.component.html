@@ -1,0 +1,82 @@
+<div class="big-container">
+    <div class="left-panel" [style.display]="isLeftPanelShown ? '' : 'none'">
+        <div style="width: 100%; height: auto; background-color: rgb(119, 119, 119)">
+            <h2>{{ text('myConversations') }}</h2>
+        </div>
+        <mat-selection-list #conversationID [multiple]="false">
+            <mat-list-option
+                class="conversation"
+                *ngFor="let conversation of conversations"
+                attr.id="{{ conversation.roomId }}"
+                value="{{ conversation.name }}"
+            >
+                <div class="option-name" (click)="connect(conversation)">
+                    <!-- <div class="avatar-placeholder"></div> -->
+                    <h3 matLine *ngIf="conversation.type === 'chatRoom' || conversation.type == 'default'">{{ conversation.name }}</h3>
+                    <h3 matLine *ngIf="conversation.type == 'private' && conversation.owner == currentUser">{{ conversation.receiver }}</h3>
+                    <h3 matLine *ngIf="conversation.type == 'private' && conversation.owner !== currentUser">{{ conversation.owner }}</h3>
+                    <mat-icon *ngIf="conversation.type == 'chatRoom' && conversation.owner == currentUser" [ngStyle]="{ color: 'yellow' }"
+                        >star</mat-icon
+                    >
+                    <i class="fas fa-crown" *ngIf="conversation.type == 'chatRoom' && conversation.owner == currentUser"></i>
+                    <button
+                        class="more-vert"
+                        mat-icon-button
+                        [matMenuTriggerFor]="menu"
+                        (click)="stopPropagation($event)"
+                        *ngIf="conversation.type == 'chatRoom' && conversation.owner != currentUser"
+                    >
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="clickOnLeaveChat(conversation.roomId, $event)" class="stop-propagator">
+                            <mat-icon>exit_to_app</mat-icon><span>{{ this.text('leaveChatRoom') }}</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </mat-list-option>
+        </mat-selection-list>
+        <button mat-button color="primary" (click)="openFriendsManagerPanel()">
+            <mat-icon>person_add</mat-icon> {{ text('friends')
+            }}<mat-icon [ngStyle]="{ color: 'red' }" *ngIf="newFriendRequest">notifications </mat-icon>
+        </button>
+        <button mat-button color="primary" (click)="openJoinChatRoomForm()"><mat-icon>people</mat-icon>{{ text('joinAChatroom') }}</button>
+        <button mat-flat-button color="primary" (click)="toggleChatView()">{{ text('switchChatView') }}</button>
+    </div>
+
+    <div class="chat-container">
+        <div style="width: 100%; height: auto; background-color: #403f3f">
+            <h2>{{ selectedValue }}</h2>
+        </div>
+
+        <div class="messages-container" #messageContainer>
+            <div *ngFor="let message of messages" class="message-container">
+                <div class="avatar">
+                    <div class="avatar-placeholder">
+                        <img src="{{ getSrcFromId(message.avatarId ?? '0') }}" />
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="username">
+                        {{ message.sender }}
+                        <span *ngIf="message.timestamp !== undefined" class="date">{{ getDateFormated(message.timestamp) }}</span>
+                    </div>
+                    <div class="text" [innerHTML]="message.formattedMessage ?? 'error'"></div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="chatSelected" class="input">
+            <textarea
+                matInput
+                autocomplete="off"
+                placeholder="{{ text('sendAMessage') }}"
+                [(ngModel)]="currentMessage"
+                (keydown)="onKeyDown($event)"
+            ></textarea>
+        </div>
+    </div>
+
+    <button mat-mini-fab color="primary" class="retract" (click)="toggleLeftPanel()">
+        <mat-icon>{{ isLeftPanelShown ? 'keyboard_arrow_left' : 'menu' }}</mat-icon>
+    </button>
+</div>

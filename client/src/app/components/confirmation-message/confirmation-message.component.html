@@ -1,0 +1,6 @@
+<h2>{{ title }}</h2>
+<p>{{ message }}</p>
+<div id="dialog-buttons">
+    <button id="ok" (click)="onOK()" [routerLink]="['/home']" routerLinkActive="router-link-active">{{ text('confirm') }}</button>
+    <button id="cancel" (click)="onCancel()">{{ text('cancel') }}</button>
+</div>

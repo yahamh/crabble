@@ -1,0 +1,20 @@
+.big-container {
+    background-color: #00000098;
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+
+.title {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    left: 50vw;
+    bottom: 20px;
+    transform: translate(-50%, 0);
+    line-height: 100%;
+}

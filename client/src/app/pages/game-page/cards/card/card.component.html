@@ -1,0 +1,33 @@
+<div class="whole-deck">
+    <div class="card container">
+        <img class="card-bg" src="assets/card.png" />
+        <div class="card-text">
+            <div *ngIf="cards.length < 3">
+                {{ wordsBeforeCard }}
+            </div>
+        </div>
+    </div>
+    <div class="deck">
+        <app-simple-card
+            class="card-drawn"
+            *ngFor="let card of cards"
+            [card]="convertCardTypeToString(card)"
+            (cardClicked)="attemptUseCard(card)"
+            [clickable]="true"
+        ></app-simple-card>
+        <div class="error" [ngClass]="{ 'show-error': error }">
+            {{ errorText }}
+        </div>
+    </div>
+</div>
+
+<div class="card-action-background" [ngClass]="{ 'show-card-action-background': display }"></div>
+<div class="card-action" [ngClass]="{ 'show-card-action': display }">
+    <div class="user-text">{{ cardUsedUser }} {{ this.text('used') }}</div>
+    <app-simple-card class="card-action-drawn" [clickable]="false" [cardAction]="playCardUsed" [card]="cardUsed"></app-simple-card>
+</div>
+
+<app-letter-swap *ngIf="isLetterSwap" (lettersChosen)="lettersChosen($event)" (closed)="closeLetterSwap()"></app-letter-swap>
+<app-rack-swap *ngIf="isRackSwap" (playerSelected)="playerSelected($event)" (closed)="closeRackSwap()"></app-rack-swap>
+<app-joker-choice *ngIf="isJoker" (cardSelected)="jokerSelected($event)" (closed)="closeJoker()" [cardsAvailable]="cardsAvailable"></app-joker-choice>
+<app-transform-tile *ngIf="isSelectingTileForTransform()" (closed)="closeTransformTile()"></app-transform-tile>

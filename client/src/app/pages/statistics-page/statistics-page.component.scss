@@ -1,0 +1,99 @@
+.big-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background: url('^assets/img/home-bg.jpg') no-repeat center top;
+    background-size: 100vw 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1 1 auto;
+}
+
+app-general-chat-box {
+    height: 100%;
+    width: 25%;
+    flex: 0 0 auto;
+}
+
+app-connection-statistics {
+    margin-left: 20px;
+}
+
+.center-vertical {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*
+.justified {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30vh;
+    align-items: center;
+}
+button {
+    margin: 0.5%;
+}
+*/
+
+.profile-settings {
+    border-radius: 999px;
+    font-size: 60px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.1s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.profile-settings:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    font-size: 200%;
+}
+
+.game-creation {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.gameStatisticsContainer {
+    width: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 50px;
+}
+
+.connectionStatisticsContainer {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.selection-button {
+    margin-top: 20px;
+}

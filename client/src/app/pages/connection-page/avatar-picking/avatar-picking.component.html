@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="avatar" (click)="openList()">
+        <img 
+            src="{{imageSourceFromId(currentPicture)}}" 
+        />
+        <div class="filter"></div>
+    </div>
+
+    <div class="list" *ngIf="listOpened">
+        <div class="first-line">
+            <div class="avatar" (click)="select(0)">
+                <img src="{{imageSourceFromId(0)}}" />
+                <div class="filter"></div>
+            </div>
+            <div class="avatar" (click)="select(1)">
+                <img src="{{imageSourceFromId(1)}}" />
+                <div class="filter"></div>
+            </div>
+            <div class="avatar" (click)="select(2)">
+                <img src="{{imageSourceFromId(2)}}" />
+                <div class="filter"></div>
+            </div>
+        </div>
+        <div class="second-line">
+            <div class="avatar" (click)="select(3)">
+                <img src="{{imageSourceFromId(3)}}" />
+                <div class="filter"></div>
+            </div>
+            <div class="avatar" (click)="select(4)">
+                <img src="{{imageSourceFromId(4)}}" />
+                <div class="filter"></div>
+            </div>
+            <div class="avatar" style="opacity: 0">
+                <img src="{{imageSourceFromId(5)}}" *ngIf="imageSourceFromId(5) != ''" />
+                <div class="icon-holder" *ngIf="imageSourceFromId(5) == ''">
+                    <i class="material-icons">add_a_photo</i>
+                </div>
+                <div class="filter"></div>
+            </div>
+        </div>
+    </div>
+</div>

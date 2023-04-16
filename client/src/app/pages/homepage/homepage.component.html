@@ -1,0 +1,17 @@
+<div class="big-container">
+    <div class="container">
+        <app-title class="center"></app-title>
+        <div class="game-creation center">
+            <app-create-game></app-create-game>
+            <div class="join-game">
+                <app-join-game></app-join-game>
+                <app-join-game [observableGames]="true"></app-join-game>
+            </div>
+        </div>
+
+        <div class="profile-settings" [routerLink]="['/user-profile']">
+            <i class="material-icons">settings</i>
+        </div>
+    </div>
+    <app-general-chat-box [style.display]="isChatDocked ? '' : 'none'"></app-general-chat-box>
+</div>

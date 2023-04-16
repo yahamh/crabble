@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-label class="center title">{{ text('createGame') }}</mat-label>
+    <h2 *ngIf="!isLoggedIn()" class="center">{{ text('mustBeLoggedInToPlay') }}</h2>
+    <app-card-list *ngIf="isLoggedIn()" class="center" (SelectedCardsChanged)="onSelectedCardsChanged($event)"></app-card-list>
+    <mat-checkbox *ngIf="isLoggedIn()" class="center" color="accent" (change)="onPowerEnabledChanged($event)" [checked]="arePowersEnabled">{{
+        text('powerCards')
+    }}</mat-checkbox>
+    <div *ngIf="isLoggedIn()" class="center slider">
+        <mat-label>{{ text('timePerTurn') }}</mat-label>
+        <mat-label>{{ timer | date: 'm:ss' }} min </mat-label> <br />
+        <mat-slider [(ngModel)]="timer" color="primary" [min]="minTimePerTurn" [max]="maxTimePerTurn" [step]="stepTimePerTurn"></mat-slider>
+    </div>
+    <mat-checkbox *ngIf="isLoggedIn()" color="accent" [(ngModel)]="isPrivate" (change)="password = ''" class="center">{{
+        text('privateGame')
+    }}</mat-checkbox>
+    <mat-form-field *ngIf="isLoggedIn() && !isPrivate" class="center">
+        <mat-label>{{ text('password') }}</mat-label>
+        <input matInput placeholder="{{ text('password') }}" [(ngModel)]="password" />
+    </mat-form-field>
+    <div class="center" *ngIf="isLoggedIn()">
+        <button color="primary" mat-flat-button (click)="playGame()" [disabled]="!isLoggedIn()">{{ text('play') }}</button>
+    </div>
+</div>

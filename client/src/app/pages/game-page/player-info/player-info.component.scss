@@ -1,0 +1,65 @@
+mat-card {
+    position: relative;
+    margin: 5px;
+}
+
+.playerInfo {
+    background-color: var(--lightgray);
+    justify-self: center;
+    position:relative;
+    padding: 5px;
+}
+
+.selectable {
+    cursor: pointer;
+}
+
+.selectable:hover {
+    background-color: rgba(131, 131, 131, 0.74);
+}
+
+.name {
+    justify-self: center;
+    font-size: 150%;
+    font-weight: 900;
+    color: var(--black-chocolate);
+}
+
+.score {
+    justify-self: end;
+    font-size: 85%;
+    color: black;
+}
+
+.active {
+    box-shadow: 1px 1px 5px 5px var(--active);
+    background-color: var(--white);
+}
+
+.inactive {
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.card-container {
+    position:relative;
+}
+
+.bot-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: .8em;
+    background-color: rgb(50, 50, 180);
+    color: rgb(218, 218, 218);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+app-reaction {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

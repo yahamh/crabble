@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>{{ text('createAnAccount') }}</h2>
+<mat-dialog-content [formGroup]="accountCreationForm">
+    <mat-form-field>
+        <input matInput autocomplete="off" placeholder="{{ text('playerName') }}" formControlName="playerName" />
+        <mat-hint>{{ text('usernameHint') }}</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <input matInput autocomplete="off" placeholder="{{ text('email') }}" formControlName="email" />
+        <mat-hint>{{ text('emailHint') }}</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <input matInput type="password" autocomplete="off" placeholder="{{ text('password') }}" formControlName="password" />
+        <mat-hint>{{ text('passwordHint') }}</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <input matInput type="password" autocomplete="off" placeholder="{{ text('confirmPassword') }}" formControlName="passwordConfirmation" />
+    </mat-form-field>
+    <br />
+    <button mat-button (click)="openProfilePicturePicker()">{{ text('chooseAProfilePicture') }}</button>
+    <br />
+    <mat-error *ngIf="this.accountCreationError !== ''">{{ text('accountCreationError') }}</mat-error>
+</mat-dialog-content>
+<br />
+<mat-dialog-actions>
+    <button mat-button (click)="cancel()">{{ text('cancel') }}</button>
+    <button mat-button (click)="createAccount()" [disabled]="!formValid">{{ text('createAnAccount') }}</button>
+</mat-dialog-actions>

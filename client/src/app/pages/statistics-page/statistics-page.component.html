@@ -1,0 +1,13 @@
+<div class="big-container">
+    <div class="container">
+        <app-title class="center"></app-title>
+        <div class="game-creation center">
+            <app-game-statistics class="center-vertical"></app-game-statistics>
+            <app-connection-statistics class="center-vertical"></app-connection-statistics>
+        </div>
+        <div class="center">
+            <button mat-flat-button color="accent" class="selection-button" [routerLink]="['/user-profile']">{{ text('return') }}</button>
+        </div>
+    </div>
+    <app-general-chat-box [style.display]="isChatDocked ? '' : 'none'"></app-general-chat-box>
+</div>

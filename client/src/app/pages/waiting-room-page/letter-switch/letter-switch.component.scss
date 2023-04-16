@@ -1,0 +1,40 @@
+.letters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.letter {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    transform: translateX(0) scale(1, 1);
+    color: black;
+    opacity: 1;
+
+    transition: transform .1s ease-in-out, opacity .2s ease-in-out;
+}
+
+.letter:active {
+    transform: translateX(0) scale(.9, .9);
+}
+
+.selected {
+    transform: translateX(0) scale(.9, .9);
+}
+
+.good {
+    filter: hue-rotate(80deg);
+}
+
+.next {
+    opacity: 0;
+}
+
+.pre {
+    opacity: 0;
+}
+
+.points, .description {
+    text-align: center;
+}

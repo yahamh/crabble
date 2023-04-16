@@ -1,0 +1,11 @@
+<div class="container">
+    <mat-label class="center title">{{ text('nameChange') }}</mat-label>
+    <mat-form-field class="center">
+        <input matInput autocomplete="off" placeholder="{{ text('newName') }}" [(ngModel)]="newUsername" />
+        <mat-hint>{{ text('newNameHint') }}</mat-hint>
+    </mat-form-field>
+    <div class="center">
+        <h2>{{ responseMessage }}</h2>
+        <button color="primary" mat-flat-button (click)="submitNameChange()" [disabled]="!isValid()">{{ text('submit') }}</button>
+    </div>
+</div>

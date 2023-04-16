@@ -1,0 +1,83 @@
+.container {
+    position: relative;
+}
+
+.button {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 9999px;
+    background-color: rgb(81, 75, 116);
+    cursor: pointer;
+
+    transition: background-color .1s ease-in-out;
+
+    .preview {
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1, 1);
+        font-size: 40px;
+
+        transition: transform .1s ease-in-out;
+    }
+}
+
+.button:hover {
+    background-color: rgb(65, 59, 97);
+
+    .preview {
+        transform: translate(-50%, -50%) scale(1.2, 1.2);
+    }
+}
+
+.choice {
+    display: none;
+    position: absolute;
+}
+
+.showList {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 550px;
+    width: 80px;
+    left: 0;
+    bottom: 0;
+    border-radius: 9999px;
+    background-color: rgb(81, 75, 116);
+
+    .emoji {
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        user-select: none;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1, 1);
+            font-size: 40px;
+            cursor: pointer;
+
+            transition: transform .1s ease-in-out;
+        }
+    }
+
+    .emoji:first-child {
+        margin-bottom: unset;
+    }
+
+    .emoji:last-child {
+        margin-top: unset;
+    }
+
+    .emoji:hover {
+        div {
+            transform: translate(-50%, -50%) scale(1.2, 1.2);
+        }
+    }
+}

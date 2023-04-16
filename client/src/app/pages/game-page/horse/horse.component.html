@@ -1,0 +1,20 @@
+<div class="rackContainer" appClickAndClickout [inputComponent]="self">
+    <app-letter 
+        *ngFor="let letter of playerRack; let index = index"
+        (mousedown)="mouseDown(index)"
+        [letter]="letter"
+        [ngClass]="{
+            isMoving: isPlacedOrMoving(index)
+        }"
+        class="letter-from-rack"
+    ></app-letter>
+</div>
+
+<app-letter 
+    class="mover"
+    [style.top]="y+'px'"
+    [style.left]="x+'px'"
+    *ngIf="dragAndDropService.movingLetter != undefined"
+    [letter]="dragAndDropService.movingLetter.letter"
+    [isHoverable]="false"
+></app-letter>

@@ -1,0 +1,24 @@
+mat-selection-list {
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.chatRoomsContainer {
+    overflow-y: hidden;
+}
+
+.conversation {
+    width: 100%;
+}
+
+.container-conversation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+h3, .more-vert {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}

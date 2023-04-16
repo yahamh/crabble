@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ this.text('connect') }}</h2>
+<mat-dialog-content [formGroup]="loginForm">
+    <mat-form-field>
+        <input matInput autocomplete="off" placeholder="{{ this.text('playerName') }}" formControlName="playerName" />
+        <mat-hint>{{ this.text('usernameHint') }}</mat-hint>
+    </mat-form-field>
+    <br />
+    <br />
+    <mat-form-field>
+        <input matInput autocomplete="off" type="password" placeholder="{{ this.text('password') }}" formControlName="password" />
+        <mat-hint>{{ this.text('passwordHint') }}</mat-hint>
+    </mat-form-field>
+    <br />
+    <mat-error *ngIf="this.loginError !== ''">{{ this.loginError }}</mat-error>
+</mat-dialog-content>
+<br />
+<mat-dialog-actions>
+    <button mat-button (click)="cancel()">{{ this.text('cancel') }}</button>
+    <button mat-button (click)="connect()" [disabled]="!formValid">{{ this.text('connect') }}</button>
+</mat-dialog-actions>

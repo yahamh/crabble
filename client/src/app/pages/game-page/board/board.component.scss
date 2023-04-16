@@ -1,0 +1,27 @@
+mat-slider {
+    width: 3%;
+}
+
+canvas {
+    width: 70vh;
+    margin-top: 25px;
+}
+
+.boardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.zoomPolice {
+    padding-left: 15%;
+    color: whitesmoke;
+}
+
+app-reaction {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}

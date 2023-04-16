@@ -1,0 +1,71 @@
+<h2>Nouvelle Partie Multijoueurs</h2>
+<mat-dialog-content [formGroup]="onlineGameSettingsUIForm">
+    <mat-form-field>
+        <input matInput autocomplete="off" placeholder="Nom de joueur" formControlName="playerName" />
+        <mat-hint>Min 3 charactères Max 50 charactères</mat-hint>
+    </mat-form-field>
+    <br />
+    <br />
+    <mat-checkbox color="accent" formControlName="arePowersEnabled">Cartes de pouvoir</mat-checkbox>
+    <br />
+    <br />
+    <mat-checkbox color="accent" formControlName="randomBonus">Bonus aléatoire</mat-checkbox>
+    <br />
+    <br />
+    <mat-form-field>
+        <mat-error> Dictionnaire supprimé, veuillez en choisir un autre </mat-error>
+        <mat-label>Dictionnaire de la partie</mat-label>
+        <mat-select [formControlName]="'dictTitle'">
+            <mat-option
+                *ngFor="let dict of dictList"
+                matNativeControl
+                required
+                [value]="dict.title"
+                [matTooltip]="dict.description"
+                matTooltipPosition="right"
+            >
+                {{ dict.title }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br />
+    <br />
+    <!-- <mat-label>Nombre de joueurs max </mat-label>
+    <mat-label>{{ capacity.value }} joueurs </mat-label> <br /> -->
+    <mat-slider
+        #capacity
+        color="primary"
+        [min]="minCapacity"
+        [max]="maxCapacity"
+        [step]="1"
+        [formControlName]="'capacity'"
+        style="display: none"
+    ></mat-slider>
+    <!-- <br />
+    <br /> -->
+    <mat-label>Temps par tour </mat-label>
+    <mat-label>{{ timer.value | date: 'm:ss' }} min </mat-label> <br />
+    <mat-slider
+        #timer
+        color="primary"
+        [min]="minTimePerTurn"
+        [max]="maxTimePerTurn"
+        [step]="stepTimePerTurn"
+        [formControlName]="'timePerTurn'"
+    ></mat-slider>
+    <br />
+    <br />
+    <mat-checkbox color="accent" formControlName="isPrivate" (change)="resetPassword()">Partie privée?</mat-checkbox>
+    <br />
+    <mat-form-field *ngIf="!this.onlineGameSettingsUIForm.get('isPrivate')?.value">
+        <br />
+        <mat-label>Mot de passe</mat-label>
+        <input matInput placeholder="Mot de passe" formControlName="password" />
+    </mat-form-field>
+    <app-card-list *ngIf="onlineGameSettingsUIForm.value.arePowersEnabled" (SelectedCardsChanged)="onSelectedCardsChanged($event)"></app-card-list>
+</mat-dialog-content>
+<br />
+<mat-dialog-actions>
+    <button mat-button (click)="cancel()">Annuler</button>
+    <button mat-button (click)="playGame()" [disabled]="!formValid">Créer une partie</button>
+</mat-dialog-actions>

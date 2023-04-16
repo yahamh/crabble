@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="title">
+        <span *ngIf="step == 0">{{ this.text('chooseALetterToSwap') }}</span>
+        <span *ngIf="step == 1">{{ this.text('chooseALetterToGet') }}</span>
+    </div>
+    <div class="list">
+        <div *ngFor="let letter of lettersToShow" class="letter" (click)="select(letter)">
+            <div>
+                {{ letter.char }}
+                <sub>{{ letter.value }}</sub>
+            </div>
+        </div>
+    </div>
+    <app-close-button (closed)="close()"></app-close-button>
+</div>

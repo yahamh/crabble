@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="title">
+        {{ this.text('chooseAnotherPlayer') }}
+    </div>
+    <div class="list">
+        <div *ngFor="let player of players" class="name" (click)="select(player)">
+            <div>
+                {{ player }}
+            </div>
+        </div>
+    </div>
+    <app-close-button (closed)="close()"></app-close-button>
+</div>

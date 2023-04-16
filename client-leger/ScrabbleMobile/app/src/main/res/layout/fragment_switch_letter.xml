@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.SwitchLetterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title_switch_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/anagram_fr"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/letterContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_switch_letter">
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView2"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView3"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView4"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView5"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView6"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView7"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView8"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView9"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView10"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <com.example.scrabblemobile.classes.game.views.LetterView
+                android:id="@+id/letterView11"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/score_switch_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Score: 0 ; Meilleur score possible: 5"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/letterContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

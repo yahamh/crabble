@@ -1,0 +1,21 @@
+<mat-dialog-content id="content">
+    <mat-form-field>
+        <input matInput autocomplete="off" [(ngModel)]="bot.name" placeholder="{{ this.text('virtualPlayerName') }}" />
+    </mat-form-field>
+    <mat-form-field *ngIf="!isEdit">
+        <mat-select placeholder="{{ this.text('virtualPlayerDifficulty') }}" [(ngModel)]="bot.type">
+            <mat-option value="Facile">{{ this.text('easy') }}</mat-option>
+            <mat-option value="Expert">{{ this.text('expert') }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="isEdit">
+        <input matInput autocomplete="off" placeholder="{{ this.text('difficulty') }}" readonly [value]="bot.type" />
+    </mat-form-field>
+    <div class="button" *ngIf="isEdit">
+        <button mat-button color="primary" (click)="editBot()" [disabled]="!isValuesValid">{{ this.text('editName') }}</button>
+    </div>
+
+    <div class="button" *ngIf="!isEdit">
+        <button mat-button (click)="addBot()" [disabled]="!isValuesValid">{{ this.text('create') }}</button>
+    </div>
+</mat-dialog-content>

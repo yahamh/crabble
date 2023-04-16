@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ this.text('choosePicture') }}</h2>
+<mat-dialog-content>
+    <img
+        *ngFor="let imageData of getDefaultImageDataArray(); index as i"
+        src="{{ getDefaultImage(i) }}"
+        height="100px"
+        width="100px"
+        margin="5px"
+        (click)="pickDefaultImage(i)"
+    />
+    <br />
+    <h2 mat-dialog-title>{{ this.text('orUploadAProfilePicture') }}</h2>
+    <input type="file" #pictureUpload (change)="onFileChange()" />
+    <mat-error *ngIf="uploadedImageError !== ''">{{ uploadedImageError }}</mat-error>
+</mat-dialog-content>
+<br />
+<mat-dialog-actions>
+    <button mat-button (click)="cancel()">{{ this.text('cancel') }}</button>
+    <button mat-button (click)="confirmSelection()" [disabled]="!hasPickedImage()">{{ this.text('choosePicture') }}</button>
+</mat-dialog-actions>

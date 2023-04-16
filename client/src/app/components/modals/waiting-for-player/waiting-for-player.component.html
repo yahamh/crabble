@@ -1,0 +1,26 @@
+<mat-dialog-content #waitingForPlayer *ngIf="!isSoloStarted">
+    <div class="title">
+        <div>
+            <h3>{{ this.text('whileWaitingForPlayers') }} ({{ players.length }}/{{ capacity }})</h3>
+            <p>{{ this.text('idOfTheGame') }}{{ pendingGameId$ | async }}</p>
+            <h4 style="margin-bottom: 0">{{ this.text('playersWaiting') }}</h4>
+            <p style="margin-top: 0; margin-left: 20px">
+                <span *ngFor="let player of players; index as i">
+                    {{ player }} <span *ngIf="i === 0">{{ this.text('you') }}</span>
+                    <button mat-icon-button *ngIf="i !== 0" (click)="kickPlayer(player)">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <br *ngIf="i < players.length - 1" />
+                </span>
+            </p>
+        </div>
+        <mat-spinner color="accent" [diameter]="spinnerDiameter" [strokeWidth]="spinnerStrokeWidth"></mat-spinner>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button color="primary" [mat-dialog-close] (click)="cancel()">{{ this.text('cancel') }}</button>
+    <!-- <button mat-button color="primary" (click)="convertToModeSolo()">Convertir en mode solo</button> -->
+    <button mat-button color="primary" [disabled]="players.length < 2 || gameId === ''" (click)="startGame()">
+        {{ this.text('play') }}
+    </button>
+</mat-dialog-actions>

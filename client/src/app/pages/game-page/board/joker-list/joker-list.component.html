@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="title">
+        Sélectionnez une lettre pour votre joker
+    </div>
+    <div class="list">
+        <app-letter
+            *ngFor="let letter of letters; let index = index"
+            [letter]="letter"
+            (click)="click(index)"
+        ></app-letter>
+    </div>
+</div>

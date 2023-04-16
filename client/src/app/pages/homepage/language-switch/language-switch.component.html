@@ -1,0 +1,11 @@
+<div>
+    <button mat-flat-button color="accent" [matMenuTriggerFor]="menu" style="color: white; margin-top: 20px;">{{text('selectLanguage')}}</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="selectLanguage('fr')">
+            <span>Français</span>
+        </button>
+        <button mat-menu-item (click)="selectLanguage('en')">
+            <span>English</span>
+        </button>
+    </mat-menu>
+</div>

@@ -1,0 +1,10 @@
+<div class="card-drawn container" [ngClass]="{'clickable': clickable}" (click)="click()" title="{{title}}" [ngStyle]="{'font-size': cardAction ? '4vh' : '2vh'}">
+    <img class="card-bg" src="{{cardSrc}}" [ngClass]="{'card-bg-unselected': !selected}">
+    <div class="card-text">
+        <div><span [innerHtml]="cardContent"></span></div>
+    </div>
+    <div class="tooltip">
+        <span class="title">{{title}}</span><br>
+        {{description}}
+    </div>
+</div>

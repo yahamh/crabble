@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="button" (mouseenter)="mouseEnterPreview()" (click)="showList()">
+        <div class="preview">
+            {{ preview }}
+        </div>
+    </div>
+
+    <div class="choice" [ngClass]="{showList: isListShown}" (mouseleave)="mouseExitChoice()">
+        <div *ngFor="let emoji of emojisWithPreviewFirst" class="emoji" (click)="selectReaction(emoji)">
+            <div>
+                {{ emoji }}
+            </div>
+        </div>
+    </div>
+</div>

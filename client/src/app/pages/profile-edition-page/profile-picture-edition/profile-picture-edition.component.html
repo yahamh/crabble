@@ -1,0 +1,8 @@
+<div class="container">
+    <mat-label class="center title">{{ text('profilePictureChange') }}</mat-label>
+    <div class="center" style="width: 100%">
+        <app-avatar-picking (imageChanged)="image = $event" class="app-avatar-picking"></app-avatar-picking>
+        <button color="primary" mat-flat-button (click)="submitProfilePictureChange()" [disabled]="image == ''" class="center">{{ text('submit') }}</button>
+        <div class="response center">{{ responseMessage }}</div>
+    </div>
+</div>

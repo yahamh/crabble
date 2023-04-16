@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="account center">
+        <div class="sign-in">
+            <div class="title center">{{ text('createAnAccount') }}</div>
+            <mat-form-field class="center">
+                <input matInput placeholder="{{ text('playerName') }}" [(ngModel)]="username" />
+            </mat-form-field>
+            <mat-form-field class="center">
+                <input matInput placeholder="{{ text('email') }}" [(ngModel)]="email" />
+            </mat-form-field>
+            <mat-form-field class="center">
+                <input matInput type="password" placeholder="{{ text('password') }}" [(ngModel)]="password" />
+            </mat-form-field>
+            <mat-form-field class="center">
+                <input matInput type="password" placeholder="{{ text('confirmPassword') }}" [(ngModel)]="verifyPassword" />
+            </mat-form-field>
+            <div class="text-label center">{{ text('chooseAProfilePicture') }}</div>
+            <app-avatar-picking (imageChanged)="image = $event" class="center"></app-avatar-picking>
+            <div class="button center">
+                <button
+                    color="primary"
+                    mat-flat-button
+                    (click)="createAccount()"
+                    [disabled]="!validAccountInfos || serverReponseSubscription != undefined || serverLoginSubscription != undefined"
+                >
+                    {{ text('confirm') }}
+                </button>
+            </div>
+        </div>
+
+        <div class="separator">
+            <div class="first-part"></div>
+            <div class="text">{{ text('or') }}</div>
+            <div class="second-part"></div>
+        </div>
+
+        <div class="log-in">
+            <div class="title center">{{ text('connect') }}</div>
+            <mat-form-field class="center">
+                <input matInput placeholder="{{ text('playerName') }}" [(ngModel)]="usernameLogin" />
+            </mat-form-field>
+            <mat-form-field class="center">
+                <input matInput type="password" placeholder="{{ text('password') }}" [(ngModel)]="passwordLogin" />
+            </mat-form-field>
+            <div class="button center">
+                <button
+                    color="primary"
+                    mat-flat-button
+                    (click)="login()"
+                    [disabled]="!validLoginInfos || serverReponseSubscription != undefined || serverLoginSubscription != undefined"
+                >
+                    {{ text('confirm') }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="error" *ngIf="accountCreationError != ''">
+    {{ accountCreationError }}
+</div>
+
+<mat-form-field class="dev-mode">
+    <input matInput placeholder="devmode" [(ngModel)]="devMode" (keyup.enter)="launchDevMode()" />
+</mat-form-field>

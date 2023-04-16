@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="center title">{{ text('connectionStatistics') }}</div>
+    <div class="pending-games center">
+        <mat-spinner *ngIf="isStatsLoading()" color="accent" [diameter]="40" [strokeWidth]="7"></mat-spinner>
+        <h2 *ngIf="errorMessage != undefined">{{ text('serverError') }}</h2>
+        <div *ngIf="connectionStatistics != undefined" class="list">
+            <div class="center" *ngIf="connectionStatistics.length == 0">{{ text('noConnectionStatistics') }}</div>
+            <div class="pending-game" *ngFor="let stats of connectionStatistics">
+                <div class="info">
+                    {{ stats.date }}
+                </div>
+                <div class="info">{{ stats.connectionStatisticsType == 'connection' ? text('connection') : text('disconnection') }}</div>
+            </div>
+        </div>
+    </div>
+</div>

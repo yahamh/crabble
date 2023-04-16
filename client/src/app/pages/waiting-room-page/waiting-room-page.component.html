@@ -1,0 +1,27 @@
+<div class="big-container">
+    <div class="container">
+        <div class="container-form center">
+            <div class="center title margin">{{ UIText.getText('whileWaitingForPlayers') }}</div>
+            <app-letter-switch class="center margin"></app-letter-switch>
+            <div class="room margin">
+                {{ UIText.getText('descRoom') }} ({{ players.length }}/4)
+            </div>
+            <div class="center player-list margin">
+                <div *ngFor="let player of players" class="player">
+                    <span class="bold" *ngIf="player == username">{{ player }}</span>
+                    <span *ngIf="player != username">
+                        {{ player }}
+                        <button mat-icon-button (click)="kickPlayer(player)" class="kick" *ngIf="newGameSocket.host">
+                            <i class="material-icons">close</i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="buttons center margin">
+                <button color="primary" mat-flat-button (click)="cancel()">{{ UIText.getText('cancel') }}</button>
+                <button color="primary" mat-flat-button (click)="play()" *ngIf="newGameSocket.host" [disabled]="!canPlay">{{ UIText.getText('play') }}</button>
+            </div>
+        </div>    
+    </div>
+    <app-general-chat-box [style.display]="isChatDocked ? '' : 'none'"></app-general-chat-box>
+</div>

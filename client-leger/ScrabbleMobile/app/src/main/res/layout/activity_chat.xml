@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <TextView
+        android:id="@+id/textView_chat"
+        android:layout_width="767dp"
+        android:layout_height="682dp"
+        android:layout_marginTop="36dp"
+        android:maxLines="17"
+        android:scrollbars="vertical"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_chat"
+        android:layout_width="624dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:hint="Entrer un message"
+        android:inputType="textPersonName"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_chat_envoyer"
+        android:layout_width="176dp"
+        android:layout_height="100dp"
+        android:text="Envoyer"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_chat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

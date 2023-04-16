@@ -1,0 +1,68 @@
+<div class="modal-header">
+    <button (click)="closeDialog('')" type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<mat-tab-group dynamicHeight class="Amis">
+    <mat-tab label="{{ text('myFriends') }}" (click)="this.getFriendsList()">
+        <mat-nav-list>
+            <h4 *ngIf="this.noFriendsMessage !== ''">{{ this.noFriendsMessage }}</h4>
+
+            <a mat-list-item class="friendRequest" *ngFor="let friend of friendsList" attr.id="{{ friend.conversationId }}">
+                <h3 matLine>{{ friend.username }}</h3>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onSendMessage(friend.username)">
+                        <mat-icon>message</mat-icon><span>{{ text('sendAMessage') }}</span>
+                    </button>
+                    <button mat-menu-item (click)="onRemoveFriend(friend)">
+                        <mat-icon>delete</mat-icon><span>{{ text('delete') }}</span>
+                    </button>
+                </mat-menu>
+            </a>
+            <a>{{ selectedValue }}</a>
+        </mat-nav-list>
+    </mat-tab>
+
+    <mat-tab label="{{ text('friendRequests') }}">
+        <ng-template mat-tab-label>
+            <span> {{ text('friendRequests') }}<mat-icon [ngStyle]="{ color: 'red' }" *ngIf="newFriendRequest">notifications </mat-icon> </span>
+        </ng-template>
+        <mat-nav-list>
+            <h4 *ngIf="this.noFriendRequestMessage !== ''">{{ this.noFriendRequestMessage }}</h4>
+
+            <a mat-list-item class="friendRequest" *ngFor="let friendRequest of friendRequests" attr.id="{{ friendRequest.sender }}">
+                <h3 matLine>{{ friendRequest.sender }}</h3>
+                <button mat-icon-button (click)="onAccept(friendRequest.sender)">
+                    <mat-icon matTooltip="{{ text('acceptFriendRequest') }}" [ngStyle]="{ color: 'green' }">add</mat-icon>
+                </button>
+                <button mat-icon-button (click)="onDecline(friendRequest.sender)">
+                    <mat-icon matTooltip="{{ text('declineFriendRequest') }}" [ngStyle]="{ color: 'red' }">delete</mat-icon>
+                </button>
+            </a>
+            <a>{{ selectedValue }}</a>
+        </mat-nav-list>
+    </mat-tab>
+
+    <mat-tab label="{{ text('addAFriend') }}">
+        <mat-card fxFlex="33%">
+            <mat-dialog-content [formGroup]="addFriendForm">
+                <mat-form-field>
+                    <input
+                        matInput
+                        class="form-control"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="{{ text('playerName') }}"
+                        formControlName="userName"
+                    />
+                </mat-form-field>
+                <mat-error *ngIf="this.userNotFoundError !== ''">{{ this.userNotFoundError }}</mat-error>
+            </mat-dialog-content>
+            <mat-dialog-actions>
+                <button mat-button (click)="createFriendRequest()" [disabled]="!formValid">{{ text('sendFriendRequest') }}</button>
+            </mat-dialog-actions>
+        </mat-card>
+    </mat-tab>
+</mat-tab-group>

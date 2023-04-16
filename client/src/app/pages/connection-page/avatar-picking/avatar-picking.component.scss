@@ -1,0 +1,71 @@
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: black;
+
+    .filter {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0;
+        transition: opacity .1s ease-in-out, background-color .1s ease-in-out;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .icon-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+
+.avatar:hover {
+    .filter {
+        opacity: 0.3;
+    }
+}
+
+.avatar:active {
+    .filter {
+        background-color: white;
+    }
+}
+
+.container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.list {
+    position: absolute;
+    background-color: rgb(48, 48, 48);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+}
+
+.first-line, .second-line {
+    display: flex;
+    flex-direction: row;
+}

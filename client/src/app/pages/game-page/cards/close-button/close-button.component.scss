@@ -1,0 +1,21 @@
+.close {
+    border-radius: 999px;
+    font-size: 60px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color .1s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}

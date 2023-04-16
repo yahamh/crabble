@@ -1,0 +1,18 @@
+<mat-dialog-content #waitingForPlayer>
+    <div class="title">
+        <div>
+            <h3>En attente de joueurs... ({{players.length}}/{{capacity}})</h3>
+            <p>Id de la partie: {{ gameId }}</p>
+            <h4 style="margin-bottom: 0;">Joueurs en attente:</h4>
+            <p style="margin-top: 0; margin-left: 20px;">
+                <span *ngFor="let player of players; index as i">
+                    {{player}} <span *ngIf="player===username">(Vous)</span><br *ngIf="i<players.length-1" />
+                </span>
+            </p>
+        </div>
+        <mat-spinner color="accent" [diameter]="spinnerDiameter" [strokeWidth]="spinnerStrokeWidth"></mat-spinner>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button color="primary" [mat-dialog-close] (click)="cancel()">Annuler</button>
+</mat-dialog-actions>

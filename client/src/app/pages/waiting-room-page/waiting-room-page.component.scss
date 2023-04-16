@@ -1,0 +1,93 @@
+.big-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+.container {
+    height: 100%;
+    background: url('^assets/img/home-bg.jpg') no-repeat center top;
+    background-size: 100vw 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1 1 auto;
+}
+
+.container-form {
+    width: 900px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+    border-radius: 4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: white;
+}
+
+.title {
+    font-size: 200%;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player-list {
+    width: 250px;
+}
+
+.player {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.281);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player:nth-child(2n-1) {
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margin:first-child {
+    margin-top: unset;
+}
+
+.margin:last-child {
+    margin-bottom: unset;
+}
+
+.buttons {
+    text-align: center;
+
+    button {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.room {
+    text-align: center;
+}
+
+app-general-chat-box {
+    flex: 0 0 auto;
+    width: 25%;
+    height: 100%;
+}

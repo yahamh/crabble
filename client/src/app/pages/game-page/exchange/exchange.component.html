@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="title">
+        Selectionnez les lettres à échanger
+    </div>
+    <div class="list">
+        <app-letter
+            *ngFor="let letter of info.user.letterRack; let index = index"
+            [letter]="letter"
+            (click)="click(index)"
+            [ngClass]="{selected: isSelected(index)}"
+        ></app-letter>
+    </div>
+    <button mat-raised-button color="accent" [disabled]="selected.length == 0" (click)="exchange()">Confirmer</button>
+    <app-close-button (closed)="close()"></app-close-button>
+</div>

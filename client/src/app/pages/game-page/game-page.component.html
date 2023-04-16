@@ -1,0 +1,37 @@
+<div class="big-container">
+    <div class="container" appMouseRoll>
+        <div class="left-side-bar">
+            <app-player-info (selectPlayer)="selectPlayer($event)" [playerSelected]="selectedPlayer"></app-player-info>
+            <app-info-box></app-info-box>
+            <div class="abandonner">
+                <button mat-raised-button (click)="abandon()" *ngIf="!isEndOfGame && !isObserving">{{ text('forfeit') }}</button>
+                <button mat-raised-button (click)="quit()" *ngIf="isEndOfGame || isObserving">{{ text('leave') }}</button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="board-reaction">
+                <app-board (clickTile)="receiveInput($event)"></app-board>
+                <app-reaction-choice></app-reaction-choice>
+            </div>
+            <div class="card-and-actions">
+                <div class="actions-and-rack">
+                    <div class="actions">
+                        <button mat-raised-button color="accent" [disabled]="!canPass" (click)="pass()">{{ text('pass') }}</button>
+                        <button mat-raised-button color="accent" [disabled]="!canExchange" (click)="exchange()">
+                            {{ text('exchange') }}
+                        </button>
+                        <button mat-raised-button color="accent" [disabled]="!canPlace" (click)="confirm()">{{ text('place') }}</button>
+                        <button mat-raised-button color="accent" [disabled]="!canCancel" (click)="cancel()">{{ text('cancel') }}</button>
+                    </div>
+                    <app-horse appPreventContextMenu (clickLetter)="receiveInput($event)" [playerSelected]="selectedPlayer"></app-horse>
+                </div>
+            </div>
+        </div>
+
+        <app-card class="card" *ngIf="isPowerGame" [selectedPlayer]="selectedPlayer" (transformTile)="transformTile($event)" id="card" #card></app-card>
+    </div>
+    <app-general-chat-box [style.display]="isChatDocked ? '' : 'none'"></app-general-chat-box>
+</div>
+
+<app-exchange *ngIf="isExchanging" (closed)="closeExchange()" (exchanged)="exchanging($event)"></app-exchange>

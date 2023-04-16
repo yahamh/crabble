@@ -1,0 +1,40 @@
+.letter-from-rack {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+.rackContainer {
+    min-height: 50%;
+    background-color: rgb(47, 37, 51);
+    border: 3px solid rgb(37, 37, 37);
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.selectedForMove {
+    background: #cc0a61; /* fallback for old browsers */
+    background: -webkit-radial-gradient(#ffffff -40%, #cc0a61 140%); /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(#ffffff -40%, #cc0a61 140%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.selectedForExchange {
+    background: #3994c9; /* fallback for old browsers */
+    background: -webkit-radial-gradient(#ffffff -40%, #3994c9 140%); /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(#ffffff -40%, #3994c9 140%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.selectedForPlace {
+    opacity: 0.3;
+}
+
+.isMoving {
+    opacity: 0.3;
+}
+
+.mover {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+}

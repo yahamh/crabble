@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <Button
+        android:id="@+id/button_profil_utilisateur"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/profil_utilisateur_fr"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_menu_clavardage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_menu_clavardage"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/clavardage_fr"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_rejoindre_partie"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/rejoindre_partie_fr"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_creer_partie" />
+
+    <Button
+        android:id="@+id/button_observer_partie"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/observer_partie_fr"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_rejoindre_partie" />
+
+    <Button
+        android:id="@+id/button_creer_partie"
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/creer_partie_fr"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_polyscrabble" />
+
+    <TextView
+        android:id="@+id/text_polyscrabble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/app_name"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<div #ScrabbleBoard class="boardContainer" appClickAndClickout [inputComponent]="self">
+    <canvas id="canvas" #gridCanvas (click)="canvasClick($event)" [ngStyle]="{'z-index': isSelectingTileForTransform() ? '999' : 'unset'}"></canvas>
+    <app-reaction [name]="'OB'"></app-reaction>
+</div>
+
+<app-joker-list (letter)="letterChosen($event)" *ngIf="choosingJoker"></app-joker-list>

@@ -1,0 +1,12 @@
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput autocomplete="off" [(ngModel)]="tempDict.title" placeholder="{{ this.text('dictionaryTitle') }}" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput autocomplete="off" [(ngModel)]="tempDict.description" placeholder="{{ this.text('description') }}" />
+    </mat-form-field>
+    <p *ngIf="!isEditedCorrectly" class="errorText">{{ this.text('serverError') }}</p>
+    <div class="uploadButton">
+        <button mat-button (click)="uploadEdit()">{{ this.text('edit') }}</button>
+    </div>
+</mat-dialog-content>

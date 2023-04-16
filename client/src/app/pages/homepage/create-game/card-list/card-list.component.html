@@ -1,0 +1,4 @@
+<div class="container">
+    <app-simple-card *ngFor="let card of cardTypes; index as i" [card]="card" [clickable]="true" (cardClicked)="select(card, i)" [selected]="enabled[i]"></app-simple-card>
+    <div class="error" [ngClass]="{'show-error':error}">{{errorText}}</div>
+</div>

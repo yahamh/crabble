@@ -1,0 +1,47 @@
+.letter {
+    font-weight: 700;
+    border-radius: 10%;
+    background-color: rgb(240, 231, 216);
+    box-shadow: 2px 2px 2px 0.2;
+    background-image: url('^assets/img/tuile.png');
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transform: rotateZ(0deg);
+    transition: transform .3s ease-in-out;
+
+    position: relative;
+
+    cursor: default;
+
+    user-select: none;
+
+    .char {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        position:absolute;
+        font-size: 1.4em;
+    }
+
+    .value {
+        bottom: 6px;
+        right: 5px;
+        transform: translate(50%, 50%);
+
+        position:absolute;
+        font-size: .8em;
+    }
+}
+
+.hoverable:hover {
+    cursor: pointer;
+    color: #050801;
+    box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white, 0 0 200px white;
+}

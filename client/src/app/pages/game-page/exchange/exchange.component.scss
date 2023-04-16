@@ -1,0 +1,47 @@
+.container {
+    background-color: #00000098;
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 500;
+}
+
+app-letter {
+    opacity: .7;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    font-size: 40px;
+    color: white;
+}
+
+button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}

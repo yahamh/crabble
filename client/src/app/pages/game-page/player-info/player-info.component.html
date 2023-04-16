@@ -1,0 +1,34 @@
+<div *ngFor="let player of players; index as i" class="card-container">
+    <mat-card class="playerInfo" id="{{ i }}" [ngClass]="{ active: player.name === activePlayerName, inactive: player.name !== activePlayerName, selectable: isSelectable }" (click)="click(player.name)">
+        <mat-card-header>
+            <span class="name">
+                {{ player.name }} 
+                <span *ngIf="player.name == myName">
+                    {{ text('you') }}
+                </span>
+            </span>
+        </mat-card-header>
+        <mat-divider inset></mat-divider>
+        <mat-card-content class="grid-container">
+            <span class="score"> {{ player.points }} points </span><br />
+            <span class="score" *ngIf="player.name == playerSelected && isSelectable">
+                {{ text('lookingAt') }}
+            </span>
+        </mat-card-content>
+        <app-reaction [name]="player.name"></app-reaction>
+        <div *ngIf="player.isVirtual" class="bot-indicator">BOT</div>
+    </mat-card>
+</div>
+<div class="card-container" title="{{observers.join('\n')}}">
+    <mat-card class="playerInfo">
+        <mat-card-header>
+            <span class="name">
+                {{ observers.length }} {{ text('observers') }}
+            </span>
+        </mat-card-header>
+        <mat-divider inset></mat-divider>
+        <mat-card-content class="grid-container">
+            <span class="score" *ngIf="observers.length>0">{{ text('hoverToSeeNames') }}</span>
+        </mat-card-content>
+    </mat-card>
+</div>

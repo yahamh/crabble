@@ -1,0 +1,11 @@
+<div class="container">
+    <app-title class="center"></app-title>
+    <div class="game-creation center">
+        <app-username-edition></app-username-edition>
+        <app-profile-picture-edition></app-profile-picture-edition>
+    </div>
+    <app-language-switch class="center"></app-language-switch>
+    <div class="center">
+        <button mat-flat-button color="accent" class="selection-button" [routerLink]="['/user-profile']">{{ text('return') }}</button>
+    </div>
+</div>

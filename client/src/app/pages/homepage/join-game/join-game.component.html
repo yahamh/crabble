@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="center title">{{ title }}</div>
+    <h2 *ngIf="!isLoggedIn()">{{ text('mustBeLoggedInToPlay') }}</h2>
+    <div *ngIf="isLoggedIn()" class="pending-games center">
+        <div class="center" *ngIf="gameSettings.length == 0">{{ text('noGameInProgress') }}</div>
+        <div class="pending-game" *ngFor="let gameSetting of gameSettings" (click)="play(gameSetting)">
+            <div class="info" *ngIf="!askingForPassword.get(gameSetting.id)">
+                {{ gameSetting.id }}
+            </div>
+            <div class="info" *ngIf="!askingForPassword.get(gameSetting.id)" title="{{ gameSetting.players.join('\n') }}">
+                {{ gameSetting.players.length }}/{{ gameSetting.capacity }} {{ text('players') }}
+            </div>
+            <div class="info" *ngIf="!askingForPassword.get(gameSetting.id)">
+                {{ Math.floor(gameSetting.timePerTurn / 1000) }}s {{ text('byTurn') }}
+            </div>
+            <div
+                class="info"
+                *ngIf="!askingForPassword.get(gameSetting.id) && (gameSetting.cards ?? []).length > 0"
+                title="{{ convertCardsToString(gameSetting.cards ?? []) }}"
+            >
+                {{ (gameSetting.cards ?? []).length }} {{ text('activeCards') }}
+            </div>
+            <div class="info" *ngIf="askingForPassword.get(gameSetting.id)">
+                <input
+                    matInput
+                    autocomplete="off"
+                    placeholder="{{ text('password') }}"
+                    (focusout)="onFocusLost()"
+                    [(ngModel)]="password"
+                    (keyup.enter)="play(gameSetting)"
+                    id="{{ gameSetting.id }}_pass"
+                />
+            </div>
+            <div class="confirm-info" *ngIf="askingForPassword.get(gameSetting.id)" (click)="onClickSend(gameSetting)">
+                <i class="material-icons">send</i>
+            </div>
+            <div class="error-info" *ngIf="askingForPassword.get(gameSetting.id) && error">
+                {{ text('wrongPassword') }}
+            </div>
+        </div>
+    </div>
+</div>

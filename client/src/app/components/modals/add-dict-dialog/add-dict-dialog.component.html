@@ -1,0 +1,11 @@
+<input type="file" name="" accept="application/JSON" #fileInput (change)="showSelectedFile()" />
+<button mat-raised-button (click)="fileInput.click()">
+    {{ text('chooseFileToUpload') }}
+</button>
+<div class="file">
+    <p>{{ selectedFile }}</p>
+</div>
+<div class="buttons">
+    <button mat-raised-button matDialogClose>{{ text('cancel') }}</button>
+    <button mat-raised-button [disabled]="selectedFile === ''" (click)="uploadFile()">{{ text('upload') }}</button>
+</div>

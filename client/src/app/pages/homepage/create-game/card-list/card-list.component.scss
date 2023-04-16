@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+app-simple-card {
+    transition: opacity .1s ease-in-out;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 6px;
+    height: 15vh;
+}
+
+.disabled {
+    opacity: 60%;
+}
+
+.enabled {
+    opacity: 100%;
+}
+
+.error {
+    color: #f56363;
+    opacity: 0%;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.708);
+    border-radius: 5px;
+    transition: opacity .05s ease-out;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: small;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.show-error {
+    opacity: 100%;
+}

@@ -1,0 +1,9 @@
+<div class="big-container">
+    <div class="title">
+        {{ this.text('chooseACard') }}
+    </div>
+    <div class="list">
+        <app-simple-card *ngFor="let card of cardTypes" [card]="card" [clickable]="true" (cardClicked)="select(card)"></app-simple-card>
+    </div>
+    <app-close-button (closed)="close()"></app-close-button>
+</div>

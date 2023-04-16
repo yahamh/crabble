@@ -1,0 +1,270 @@
+<resources>
+    <!--MainActivity-->
+    <string name="profil_utilisateur_fr">Profil d\'utilisateur</string>
+    <string name="profil_utilisateur_en">User profile</string>
+
+    <string name="clavardage_fr">Clavardage</string>
+    <string name="clavardage_en">Chat</string>
+
+    <string name="creer_partie_fr">Créer une Partie</string>
+    <string name="creer_partie_en">Create game</string>
+
+    <string name="rejoindre_partie_fr">Rejoindre une partie</string>
+    <string name="rejoindre_partie_en">Join a game</string>
+
+    <!--UserProfileActivity-->
+    <string name="statistiques_fr">Statistiques</string>
+    <string name="statistiques_en">Statistics</string>
+
+    <string name="preferences_fr">Préférences</string>
+    <string name="preferences_en">Preferences</string>
+
+    <string name="modifier_profil_fr">Modifier le profil</string>
+    <string name="modifier_profil_en">Edit profile</string>
+
+    <string name="deconnecter_fr">Se déconnecter</string>
+    <string name="deconnecter_en">Log out</string>
+
+    <string name="utilisateur_connecte_fr">Utilisateur connecté: %1$s</string>
+    <string name="utilisateur_connecte_en">Logged in user: %1$s</string>
+
+    <!--CreateGameActivity-->
+    <string name="indicateur_cartes_fr">Touchez une carte pour voir son effet !</string>
+    <string name="indicateur_cartes_en">Touch a card to see its effect !</string>
+
+    <string name="observer_partie_fr">Observer une partie</string>
+    <string name="observer_partie_en">Observe game</string>
+
+    <string name="aucun_partie_fr">Aucune partie à afficher</string>
+    <string name="aucun_partie_en">No game to show</string>
+
+    <string name="vous_etes_observateur_fr">Vous êtes un observateur, vous ne pouvez pas jouer!</string>
+    <string name="vous_etes_observateur_en">You are a spectator, you can\'t play!</string>
+
+    <string name="observer_fr">Observer</string>
+    <string name="observer_en">Spectate</string>
+
+    <string-array name="cartes_fr">
+        <item>Faites passer le tour du prochain joueur 😈😈</item>
+        <item>Modifiez une case du terrain en une case bonus (x2 ou x3, mot ou lettre)</item>
+        <item>Réduisez le temps de jeu de moitié pour tous les joueurs, sauf pour vous, pendant un tour ⌛</item>
+        <item>Échangez une lettre de votre chevalet pour une lettre présente dans le sac</item>
+        <item>Échangez votre chevalet pour celui d\'un autre joueur</item>
+        <item>Répartissez tous les points du meilleur joueur de la partie entre tout le monde</item>
+        <item>Gagnez 25 points! Gratuitement! Pas d\'arnaques!</item>
+        <item>Vous permet de choisir une carte parmis toutes celles disponibles</item>
+    </string-array>
+    <string-array name="cartes_en">
+        <item>Make the next player skip a turn 😈😈</item>
+        <item>Change a tile on the board into a bonus tile (x2 or x3, word or letter)</item>
+        <item>Cut the time by half for everyone except you, for one turn ⌛</item>
+        <item>Swap one of your letters for a letter in the bag</item>
+        <item>Swap all your letters with someone else\'s</item>
+        <item>Split all of the leader\'s points among everyone</item>
+        <item>Win 25 points! Free of charge! No scam!</item>
+        <item>Allows you to choose a card among all the available ones</item>
+    </string-array>
+
+    <string name="partie_prive_fr">Partie privée?</string>
+    <string name="partie_prive_en">Private game?</string>
+
+    <string name="mot_de_passe_fr">Mot de passe</string>
+    <string name="mot_de_passe_en">Password</string>
+
+    <string name="ouvrir_partie_fr">Jouer!</string>
+    <string name="ouvrir_partie_en">Play!</string>
+
+    <string name="temps_tour_fr">Temps par tour %1$d:%2$s min</string>
+    <string name="temps_tour_en">Time per turn %1$d:%2$s min</string>
+
+    <!--EnterPasswordActivity-->
+    <string name="mot_de_passe_incorrect_fr">Mot de passe incorrect :</string>
+    <string name="mot_de_passe_incorrect_en">Wrong password :</string>
+
+    <string name="quitter_fr">Quitter</string>
+    <string name="quitter_en">Leave</string>
+
+    <string name="rejoindre_cette_partie_fr">Rejoindre</string>
+    <string name="rejoindre_cette_partie_en">Join</string>
+
+    <!--WelcomePageActivity-->
+    <string name="creer_un_compte_fr">Créer un compte</string>
+    <string name="creer_un_compte_en">Sign up</string>
+
+    <string name="nom_utilisateur_fr">Nom d\'utilisateur</string>
+    <string name="nom_utilisateur_en">Username</string>
+
+    <string name="courriel_fr">Adresse courriel</string>
+    <string name="courriel_en">Email address</string>
+
+    <string name="confirmation_mot_de_passe_fr">Confirmer le mot de passe</string>
+    <string name="confirmation_mot_de_passe_en">Confirm password</string>
+
+    <string name="se_connecter_fr">Se connecter</string>
+    <string name="se_connecter_en">Sign in</string>
+
+    <string name="sign_in_hint_fr">Min 3 caractères, Max 16 caractères</string>
+    <string name="sign_in_hint_en">Min 3 characters, Max 16 characters</string>
+
+    <string name="courriel_invalide_fr">L\'adresse courriel est invalide</string>
+    <string name="courriel_invalide_en">Invalid email address</string>
+
+    <string name="mots_de_passes_differents_fr">Les mots de passes sont différents</string>
+    <string name="mots_de_passes_differents_en">Passwords do not match</string>
+
+    <!--ModifyProfileActivity-->
+    <string name="modifier_pseudo_fr">Modifier le nom d\'utilisateur</string>
+    <string name="modifier_pseudo_en">Edit username</string>
+
+    <string name="nouveau_nom_fr">Nouveau nom d\'utilisateur</string>
+    <string name="nouveau_nom_en">New username</string>
+
+    <string name="confirmer_fr">Terminé</string>
+    <string name="confirmer_en">Confirm</string>
+
+    <string name="nouveau_nom_invalide_fr">Le nouveau nom ne peut pas être l\'ancien !</string>
+    <string name="nouveau_nom_invalide_en">New username can\'t be the same as the current one !</string>
+
+    <!--StatisticsActivity-->
+    <string name="chargement_fr">Chargement…</string>
+    <string name="chargement_en">Loading…</string>
+
+    <string name="nombre_parties_jouees_fr">Nombre de parties jouées : %1$s</string>
+    <string name="nombre_parties_jouees_en">Number of games played : %1$s</string>
+
+    <string name="nombre_parties_gagnees_fr">Nombre de parties gagnées : %1$s</string>
+    <string name="nombre_parties_gagnees_en">Number of games won : %1$s</string>
+
+    <string name="score_moyen_fr">Score moyen : %1$s</string>
+    <string name="score_moyen_en">Average score : %1$s</string>
+
+    <string name="temps_moyen_fr">Temps moyen par partie : %1$ss</string>
+    <string name="temps_moyen_en">Average time per game : %1$ss</string>
+
+    <string name="statistiques_compte_fr">Statistiques de connexion :</string>
+    <string name="statistiques_compte_en">Connection statistics :</string>
+
+    <string name="statistiques_jeu_fr">Statistiques de jeu :</string>
+    <string name="statistiques_jeu_en">Game statistics :</string>
+
+    <!--WaitingRoomActivity-->
+    <string name="attente_fr">En attente du lancement de la partie…</string>
+    <string name="attente_en">Waiting for the game to start…</string>
+
+    <string name="joueurs_fr">Joueurs :</string>
+    <string name="joueurs_en">Players :</string>
+
+    <string name="lancer_partie_fr">Lancer la partie</string>
+    <string name="lancer_partie_en">Start game</string>
+
+    <!--PreferencesActivity-->
+    <string name="choix_langue_fr">Choix de la langue</string>
+    <string name="choix_langue_en">Language choice</string>
+
+    <string name="francais_fr">Français</string>
+    <string name="francais_en">French</string>
+
+    <string name="anglais_fr">Anglais</string>
+    <string name="anglais_en">English</string>
+
+    <string name="choix_theme_fr">Choix du thème</string>
+    <string name="choix_theme_en">Theme choice</string>
+
+    <string name="light_fr">Clair</string>
+    <string name="light_en">Light</string>
+
+    <string name="dark_fr">Sombre</string>
+    <string name="dark_en">Dark</string>
+
+    <!--GameActivity-->
+    <string name="passer_fr">Passer</string>
+    <string name="passer_en">Pass</string>
+
+    <string name="echanger_fr">Échanger</string>
+    <string name="echanger_en">Exchange</string>
+
+    <string name="placer_fr">Placer</string>
+    <string name="placer_en">Place</string>
+
+    <string name="annuler_fr">Annuler</string>
+    <string name="annuler_en">Cancel</string>
+
+    <string name="abandonner_fr">Abandonner</string>
+    <string name="abandonner_en">Forfeit</string>
+
+    <string name="cartes_fr">Cartes</string>
+    <string name="cartes_en">Cards</string>
+
+    <!--CardsFragment-->
+    <string name="fragment_cards_titre_fr">Vos cartes</string>
+    <string name="fragment_cards_titre_en">Your cards</string>
+
+    <string name="aucune_carte_fr">Vous n\'avez aucune carte pour le moment</string>
+    <string name="aucune_carte_en">You have no cards at the moment</string>
+
+    <string name="retour_fr">Retour</string>
+    <string name="retour_en">Back</string>
+
+    <string name="utiliser_fr">Utiliser</string>
+    <string name="utiliser_en">Use</string>
+
+    <!--ExchangeFragment-->
+    <string name="selectione_fr">Sélectionnez les lettres à échanger</string>
+    <string name="selectione_en">Choose letters to swap</string>
+
+    <!--OptionJokerFragment-->
+    <string name="selectione_carte_fr">Sélectionnez une carte</string>
+    <string name="selectione_carte_en">Choose a card</string>
+
+    <!--OptionSwapLetterFragment-->
+    <string name="selectione_lettre_fr">Sélectionnez une lettre</string>
+    <string name="selectione_lettre_en">Choose a letter</string>
+
+    <string name="selectione_lettre_recup_fr">Sélectionnez la lettre à récupérer</string>
+    <string name="selectione_lettre_recup_en">Choose letter to get</string>
+
+    <string name="no_more_letters_fr">Plus de lettres dans le sac!</string>
+    <string name="no_more_letters_en">No more letters in the bag!</string>
+
+    <!--OptionSwapRackFragment-->
+    <string name="selectione_joueur_fr">Sélectionnez un joueur</string>
+    <string name="selectione_joueur_en">Choose a player</string>
+
+    <!--OptionTransfromTileFragment-->
+    <string name="selectione_position_fr">Sélectionnez une position</string>
+    <string name="selectione_position_en">Choose a position</string>
+
+    <string name="position_occupe_fr">Cette position est déjà occupée</string>
+    <string name="position_occupe_en">This position is already occupied</string>
+
+    <!--JokerLetterFragment-->
+    <string name="joker_letter_titre_fr">Sélectionnez une lettre pour votre joker</string>
+    <string name="joker_letter_titre_en">Choose a letter for your joker</string>
+
+    <string-array name="cartes_titre_fr">
+        <item>Interdiction</item>
+        <item>Transmutation</item>
+        <item>Plus rapide!</item>
+        <item>Échange</item>
+        <item>Vol</item>
+        <item>Communisme</item>
+        <item>Bonus</item>
+        <item>Joker</item>
+    </string-array>
+    <string-array name="cartes_titre_en">
+        <item>Forbid</item>
+        <item>Transmutation</item>
+        <item>Quicker!</item>
+        <item>Swap</item>
+        <item>Steal</item>
+        <item>Communism</item>
+        <item>Bonus</item>
+        <item>Joker</item>
+    </string-array>
+
+    <string name="app_name">Crabbl</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="anagram_en">Here is an anagram. Try to reform the word!</string>
+    <string name="anagram_fr">Voici un anagrame. Tentez de reformer le mot!</string>
+</resources>

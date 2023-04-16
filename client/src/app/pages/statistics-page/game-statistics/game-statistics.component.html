@@ -1,0 +1,13 @@
+<div class="container">
+    <mat-label class="center title">{{ text('gameStatistics') }}</mat-label>
+    <mat-spinner *ngIf="isStatsLoading()" color="accent" [diameter]="40" [strokeWidth]="7"></mat-spinner>
+    <h2 *ngIf="errorMessage != undefined">{{ text('serverError') }}</h2>
+    <div *ngIf="gameStatistics != undefined">
+        <h2>{{ text('numberOfPlayedGames') }}: {{ gameStatistics.totalNumberOfGames }}</h2>
+        <h2>{{ text('numberOfWonGames') }}: {{ gameStatistics.totalNumberOfWins }}</h2>
+        <h2 *ngIf="gameStatistics.averageScorePerGame !== 'NaN'">{{ text('averageScorePerGame') }} {{ gameStatistics.averageScorePerGame }}</h2>
+        <h2 *ngIf="gameStatistics.averageTimePerGameSeconds !== 'NaN'">
+            {{ text('averageTimePerGame') }} {{ gameStatistics.averageTimePerGameSeconds }}s
+        </h2>
+    </div>
+</div>

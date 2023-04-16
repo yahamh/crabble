@@ -1,0 +1,834 @@
+{
+    "createGame": {
+        "fr": "Créer une partie",
+        "en": "Create game"
+    },
+    "mustBeLoggedInToPlay": {
+        "fr": "Vous devez être connecté pour pouvoir jouer.",
+        "en": "You need to be connected in order to play."
+    },
+    "powerCards": {
+        "fr": "Cartes de pouvoir",
+        "en": "Power cards"
+    },
+    "timePerTurn": {
+        "fr": "Temps par tour",
+        "en": "Time per turn"
+    },
+    "privateGame": {
+        "fr": "Partie privée?",
+        "en": "Private game?"
+    },
+    "password": {
+        "fr": "Mot de passe",
+        "en": "Password"
+    },
+    "play": {
+        "fr": "Jouer!",
+        "en": "Play!"
+    },
+    "writeAMessage": {
+        "fr": "Écrivez un message",
+        "en": "Write a message"
+    },
+    "cancel": {
+        "fr": "Annuler",
+        "en": "Cancel"
+    },
+    "exchange": {
+        "fr": "Échanger",
+        "en": "Exchange"
+    },
+    "confirm": {
+        "fr": "Confirmer",
+        "en": "Confirm"
+    },
+    "leave": {
+        "fr": "Quitter",
+        "en": "Leave"
+    },
+    "forfeit": {
+        "fr": "Abandonner",
+        "en": "Forfeit"
+    },
+    "confirmForfeit": {
+        "fr": "Confirmer votre abandon",
+        "en": "Confirm game forfeit"
+    },
+    "doYouWantToForfeit": {
+        "fr": "Voulez-vous abandonner cette partie?",
+        "en": "Do you want to forfeit this game?"
+    },
+    "choose": {
+        "fr": "Choisir",
+        "en": "Choose"
+    },
+    "myConversations": {
+        "fr": "Mes conversations",
+        "en": "My conversations"
+    },
+    "joinAChatroom": {
+        "fr": "Chatrooms",
+        "en": "Chatrooms"
+    },
+    "sendAMessage": {
+        "fr": "Envoyer un message",
+        "en": "Send a message"
+    },
+    "informationPanel": {
+        "fr": "PANNEAU INFORMATIF",
+        "en": "INFORMATION PANEL"
+    },
+    "remainingTiles": {
+        "fr": "Tuiles restantes: ",
+        "en": "Remaining tiles: "
+    },
+    "congratulationsYouWin": {
+        "fr": "Bravo vous avez gagné !",
+        "en": "Congratulations, you win!"
+    },
+    "youLost": {
+        "fr": "Vous avez perdu !",
+        "en": "You lost!"
+    },
+    "youWouldBeDeclaredLoser": {
+        "fr": "Vous seriez alors déclaré perdant",
+        "en": "You would be declared loser"
+    },
+    "usernameHint": {
+        "fr": "Min 3 caractères, Max 16 caractères",
+        "en": "Min 3 characters, Max 16 characters"
+    },
+    "playerName": {
+        "fr": "Nom d'utilisateur",
+        "en": "Username"
+    },
+    "emailHint": {
+        "fr": "Min 3 caractères, Max 50 caractères",
+        "en": "Min 3 characters, Max 50 characters"
+    },
+    "email": {
+        "fr": "Adresse courriel",
+        "en": "E-mail address"
+    },
+    "passwordHint": {
+        "fr": "Min 3 caractères, Max 16 caractères",
+        "en": "Min 3 characters, Max 16 characters"
+    },
+    "confirmPassword": {
+        "fr": "Confirmer le mot de passe",
+        "en": "Confirm password"
+    },
+    "chooseAProfilePicture": {
+        "fr": "Choisir une image de profil",
+        "en": "Choose profile picture"
+    },
+    "createAnAccount": {
+        "fr": "Créer un compte",
+        "en": "Create an account"
+    },
+    "accountCreationError": {
+        "fr": "Erreur lors de la création de compte",
+        "en": "Error during the account creation"
+    },
+    "chooseFileToUpload": {
+        "fr": "Choisir un fichier à téléverser",
+        "en": "Choose a file to upload"
+    },
+    "upload": {
+        "fr": "Téléverser",
+        "en": "Upload"
+    },
+    "dictionaryHasNoTitle": {
+        "fr": "Le dictionnaire fourni n'a pas de titre",
+        "en": "The provided dictionary has no title"
+    },
+    "dictionaryTitleHasSpecialCharacters": {
+        "fr": "Le titre du dictionaire fourni a des caractères spéciaux",
+        "en": "The provided dictionary has special characters in its title"
+    },
+    "dictionaryHasNoDescription": {
+        "fr": "Le dictionnaire fourni n'a pas de description",
+        "en": "The provided dictionary has no description"
+    },
+    "dictionaryHasNoWordList": {
+        "fr": "Le dictionnaire fourni ne contient pas de liste de mots",
+        "en": "The provided dictionary has no word list"
+    },
+    "dictionaryWithSameTitleExists": {
+        "fr": "Le titre du dictionaire est déjà utilisé",
+        "en": "The dictionary title is already used"
+    },
+    "selectedFileIsNotJSON": {
+        "fr": "Le fichier sélectionné n'est pas un fichier JSON",
+        "en": "The selected file is not a JSON file"
+    },
+    "soloGameConfig": {
+        "fr": "Configuration partie solo",
+        "en": "Solo game configuration"
+    },
+    "opponentDifficulty": {
+        "fr": "Difficulté de votre adversaire",
+        "en": "Opponent difficulty"
+    },
+    "beginner": {
+        "fr": "Débutant",
+        "en": "Beginner"
+    },
+    "expert": {
+        "fr": "Expert",
+        "en": "Expert"
+    },
+    "startGame": {
+        "fr": "Commencer la partie",
+        "en": "Start game"
+    },
+    "disconnectedFromServer": {
+        "fr": "Vous avez été déconnecté du serveur",
+        "en": "You have been disconnected from the server"
+    },
+    "returnToMainMenu": {
+        "fr": "Revenir au menu principal",
+        "en": "Return to main menu"
+    },
+    "virtualPlayerName": {
+        "fr": "Nom du joueur virtuel",
+        "en": "Virtual player name"
+    },
+    "virtualPlayerDifficulty": {
+        "fr": "Difficulté du joueur virtuel",
+        "en": "Virtual player difficulty"
+    },
+    "difficulty": {
+        "fr": "Difficulté",
+        "en": "Difficulty"
+    },
+    "editName": {
+        "fr": "Modifier le nom",
+        "en": "Edit name"
+    },
+    "create": {
+        "fr": "Créer",
+        "en": "Create"
+    },
+    "easy": {
+        "fr": "Facile",
+        "en": "Easy"
+    },
+    "virtualPlayerNameAlreadyUsed": {
+        "fr": "Le nom du joueur virtuel est déjà utilisé",
+        "en": "The virtual player name is already used"
+    },
+    "botNotFound": {
+        "fr": "Le serveur n'est pas en mesure de trouver le joueur virtuel que vous voulez modifier.\nVeuillez rafraichir la page pour obtenir la liste la plus récente des joueurs virtuels.",
+        "en": "The server was unable to find the virtual player that you want to edit.\nPlease refresh the page to get the most recent list of virtual players"
+    },
+    "serverError": {
+        "fr": "Une erreur est survenue avec le serveur, veuillez réessayer plus tard.",
+        "en": "A problem happened with the server, please try again later."
+    },
+    "edit": {
+        "fr": "Changer",
+        "en": "Edit"
+    },
+    "dictionaryTitle": {
+        "fr": "Titre du dictionnaire",
+        "en": "Dictionary title"
+    },
+    "description": {
+        "fr": "Description",
+        "en": "Description"
+    },
+    "refreshToSeeUpdatedDictionaryList": {
+        "fr": "Veuillez rafraichir la page pour obtenir la liste la plus récente des dictionnaires",
+        "en": "Please refresh the page to get the most up-to-date dictionary list"
+    },
+    "editedDictionaryNotFound": {
+        "fr": "Le serveur n'est pas en mesure de trouver le dictionnaire que vous voulez modifier.",
+        "en": "The server could not find the dictionary that you want to edit."
+    },
+    "joinChatroom": {
+        "fr": "Rejoindre un salon",
+        "en": "Join chatroom"
+    },
+    "existingChatrooms": {
+        "fr": "Salon(s) existant(s)",
+        "en": "Existing chatroom(s)"
+    },
+    "typeNameToFilter": {
+        "fr": "Taper le nom pour filtrer",
+        "en": "Type name to filter"
+    },
+    "chatroomName": {
+        "fr": "Nom du salon",
+        "en": "Chat room name"
+    },
+    "createChatroom": {
+        "fr": "Créer un salon",
+        "en": "Create chatroom"
+    },
+    "refreshList": {
+        "fr": "Rafraichir la liste",
+        "en": "Refresh list"
+    },
+    "chatroomNameAlreadyUsed": {
+        "fr": "Un salon avec ce nom existe déjà.",
+        "en": "A chat room with this name already exists."
+    },
+    "multiplayerGameConfig": {
+        "fr": "Configuration de partie multijoueur",
+        "en": "Multiplayer game configuration"
+    },
+    "opponentNameHint": {
+        "fr": "Nom différent de l'adversaire. Min 3, Max 50 caractères",
+        "en": "Different name for the adversary. Min 3, Max 50 characters"
+    },
+    "opponents": {
+        "fr": "Adversaires",
+        "en": "Opponents"
+    },
+    "randomBonus": {
+        "fr": "Bonus aléatoire",
+        "en": "Random bonus"
+    },
+    "dictionaryOftheGame": {
+        "fr": "Dictionnaire de la partie",
+        "en": "Dictionary of the game"
+    },
+    "join": {
+        "fr": "Rejoindre",
+        "en": "Join"
+    },
+    "isActivated": {
+        "fr": "est activé",
+        "en": "is activated"
+    },
+    "isDeactivated": {
+        "fr": "est désactivé",
+        "en": "is deactivated"
+    },
+    "bestScores": {
+        "fr": "Meilleurs Scores",
+        "en": "Best Scores"
+    },
+    "unableToConnect": {
+        "fr": "est désactivé",
+        "en": "is deactivated"
+    },
+    "close": {
+        "fr": "Fermer",
+        "en": "Close"
+    },
+    "classicMode": {
+        "fr": "Mode Classique",
+        "en": "Classic Mode"
+    },
+    "log2990mode": {
+        "fr": "Mode LOG2990",
+        "en": "LOG2990 Mode"
+    },
+    "playedNames": {
+        "fr": "Nom des joueurs",
+        "en": "Player names"
+    },
+    "score": {
+        "fr": "Score",
+        "en": "Score"
+    },
+    "gameLoadingInProgress": {
+        "fr": "Chargement de la partie en cours",
+        "en": "Game loading in progress"
+    },
+    "connect": {
+        "fr": "Se connecter",
+        "en": "Connect"
+    },
+    "connectionFailed": {
+        "fr": "La connexion a échoué. Veuillez réessayer.",
+        "en": "The connection failed. Please try again."
+    },
+    "orUploadAProfilePicture": {
+        "fr": "Ou téléverser un avatar",
+        "en": "Or upload a profile picture"
+    },
+    "choosePicture": {
+        "fr": "Choisir une image",
+        "en": "Choose a picture"
+    },
+    "moreThanOneFileError": {
+        "fr": "Erreur: plus d'un fichier a été sélectionné",
+        "en": "Error: more than one file was selected"
+    },
+    "chooseAnImageError": {
+        "fr": "Erreur: veuillez choisir une image",
+        "en": "Error: please choose an image"
+    },
+    "whileWaitingForPlayers": {
+        "fr": "En attente de joueurs...",
+        "en": "Waiting for players..."
+    },
+    "idOfTheGame": {
+        "fr": "Id de la partie: ",
+        "en": "Id of the game: "
+    },
+    "playersWaiting": {
+        "fr": "Joueurs en attente:",
+        "en": "Waiting players:"
+    },
+    "you": {
+        "fr": "(Vous)",
+        "en": "(You)"
+    },
+    "winnerIs": {
+        "fr": "Le gagnant de la partie est ",
+        "en": "The winner of the game is "
+    },
+    "winnersAre": {
+        "fr": "Les gagnants de la partie sont ",
+        "en": "The winners of the game are "
+    },
+    "and": {
+        "fr": " et ",
+        "en": ", and "
+    },
+    "congratulations": {
+        "fr": "Féliciations!",
+        "en": "Congratulations!"
+    },
+    "sorry": {
+        "fr": "Dommage...",
+        "en": "Too bad..."
+    },
+    "notYourTurn": {
+        "fr": "Ce n'est pas votre tour",
+        "en": "It is not your turn"
+    },
+    "used": {
+        "fr": "a utilisé",
+        "en": "used"
+    },
+    "chooseACard": {
+        "fr": "Sélectionnez une carte",
+        "en": "Choose a card"
+    },
+    "chooseALetterToSwap": {
+        "fr": "Selectionnez une lettre à échanger",
+        "en": "Choose a letter to swap"
+    },
+    "chooseALetterToGet": {
+        "fr": "Selectionnez une lettre à récupérer",
+        "en": "Choose a letter to get"
+    },
+    "chooseAnotherPlayer": {
+        "fr": "Selectionnez un autre joueur",
+        "en": "Choose another player"
+    },
+    "andChose": {
+        "fr": "et a choisi",
+        "en": "and chose"
+    },
+    "error": {
+        "fr": "Erreur",
+        "en": "Error"
+    },
+    "skipsTheirTurn": {
+        "fr": "passe son tour!",
+        "en": "skips their turn!"
+    },
+    "bonusPoints": {
+        "fr": "points bonus!",
+        "en": "bonus points!"
+    },
+    "theOtherPlayersWillHaveLessTime": {
+        "fr": "Les autres joueurs auront moins de temps!",
+        "en": "The other players with have less time"
+    },
+    "personLosesAllTheirPoints": {
+        "fr": "perd tous ses points",
+        "en": "loses all their points"
+    },
+    "peopleLoseAllTheirPoints": {
+        "fr": "perdent tous leurs points",
+        "en": "lose all their points"
+    },
+    "pointsAreDistributedToEveryone": {
+        "fr": "points sont distribués à chacun!",
+        "en": "points are distributed to everyone!"
+    },
+    "for": {
+        "fr": "pour",
+        "en": "for"
+    },
+    "theSquare": {
+        "fr": "La case",
+        "en": "The square"
+    },
+    "becomes": {
+        "fr": "devient",
+        "en": "becomes"
+    },
+    "word": {
+        "fr": "mot",
+        "en": "word"
+    },
+    "letter": {
+        "fr": "lettre",
+        "en": "letter"
+    },
+    "selectASquareToTransform": {
+        "fr": "Sélectionnez une case",
+        "en": "Select a tile"
+    },
+    "remainingLettersInTheHorse": {
+        "fr": "lettres restantes dans le chevalet",
+        "en": "remaining letters in the horse"
+    },
+    "pass": {
+        "fr": "Passer",
+        "en": "Pass"
+    },
+    "place": {
+        "fr": "Placer",
+        "en": "Place"
+    },
+    "yourOpponentForfeitted": {
+        "fr": "Votre adversaire a abandonné la partie et sera remplacé par un joueur virtuel",
+        "en": "Your opponent forfeitted the game and will be replaced by a virtual player"
+    },
+    "joinAGame": {
+        "fr": "Rejoindre une partie",
+        "en": "Join a game"
+    },
+    "noGameInProgress": {
+        "fr": "Aucune partie en cours",
+        "en": "No game in progress"
+    },
+    "players": {
+        "fr": "joueurs",
+        "en": "players"
+    },
+    "byTurn": {
+        "fr": "par tour",
+        "en": "by turn"
+    },
+    "activeCards": {
+        "fr": "cartes actives",
+        "en": "active cards"
+    },
+    "wrongPassword": {
+        "fr": "Mot de passe incorrect",
+        "en": "Wrong password"
+    },
+    "joinARandomGame": {
+        "fr": "Rejoindre aléatoirement",
+        "en": "Join random"
+    },
+    "languageToSwitch": {
+        "fr": "English",
+        "en": "Français"
+    },
+    "nameChange": {
+        "fr": "Changement de nom",
+        "en": "Name change"
+    },
+    "newName": {
+        "fr": "Nouveau nom",
+        "en": "New name"
+    },
+    "newNameHint": {
+        "fr": "De 3 à 16 caractères",
+        "en": "3-16 characters"
+    },
+    "submit": {
+        "fr": "Soumettre",
+        "en": "Submit"
+    },
+    "successfulNameChange": {
+        "fr": "Le changement de nom a réussi",
+        "en": "Successful name change"
+    },
+    "successfulProfilePictureChange": {
+        "fr": "Le changement d'avatar a réussi",
+        "en": "Successful profile picture change"
+    },
+    "profilePictureChange": {
+        "fr": "Changement d'avatar",
+        "en": "Profile picture change"
+    },
+    "cardDescriptionJoker": {
+        "fr": "Vous permet de choisir une carte parmis toutes celles disponibles",
+        "en": "Allows you to choose a card among all the available ones"
+    },
+    "cardDescriptionPassTurn": {
+        "fr": "Faites passer le tour du prochain joueur 😈😈",
+        "en": "Make the next player skip a turn 😈😈"
+    },
+    "cardDescriptionPoints": {
+        "fr": "Gagnez 25 points! Gratuitement! Pas d'arnaques!",
+        "en": "Win 25 points! For free! No scam!"
+    },
+    "cardDescriptionRemoveTime": {
+        "fr": "Réduisez le temps de jeu de moitié pour tous les joueurs, sauf pour vous, pendant un tour ⌛",
+        "en": "Cut the time by half for everyone except you, for one turn ⌛"
+    },
+    "cardDescriptionSteal": {
+        "fr": "Répartissez tous les points du meilleur joueur de la partie entre tout le monde",
+        "en": "Split all of the leader's points among everyone"
+    },
+    "cardDescriptionSwapLetter": {
+        "fr": "Échangez une lettre de votre chevalet pour une lettre présente dans le sac",
+        "en": "Swap one of you letters for a letter in the bag"
+    },
+    "cardDescriptionSwapRack": {
+        "fr": "Échangez votre chevalet pour celui d'un autre joueur",
+        "en": "Swap all your letters with someone else's"
+    },
+    "cardDescriptionTransformTile": {
+        "fr": "Modifiez une case du terrain en une case bonus (x2 ou x3, mot ou lettre)",
+        "en": "Change a tile on the board into a bonus tile (x2 or x3, word or letter)"
+    },
+    "cardTitleJoker": {
+        "fr": "Joker",
+        "en": "Joker"
+    },
+    "cardTitlePassTurn": {
+        "fr": "Interdiction",
+        "en": "Forbid"
+    },
+    "cardTitlePoints": {
+        "fr": "Bonus",
+        "en": "Bonus"
+    },
+    "cardTitleRemoveTime": {
+        "fr": "Plus rapide!",
+        "en": "Quicker!"
+    },
+    "cardTitleSteal": {
+        "fr": "Communisme",
+        "en": "Communism"
+    },
+    "cardTitleSwapLetter": {
+        "fr": "Échange",
+        "en": "Swap"
+    },
+    "cardTitleSwapRack": {
+        "fr": "Vol",
+        "en": "Steal"
+    },
+    "cardTitleTransformTile": {
+        "fr": "Transmutation",
+        "en": "Transmutation"
+    },
+    "current": {
+        "fr": "Score:",
+        "en": "Score:"
+    },
+    "best": {
+        "fr": "Meilleur score possible:",
+        "en": "Best possible score:"
+    },
+    "descriptionMiniGame": {
+        "fr": "Voici un anagrame. Tentez de reformer le mot!",
+        "en": "Here is an anagram. Try to reform the word!"
+    },
+    "descRoom": {
+        "fr": "Joueurs en attente...",
+        "en": "Players waiting..."
+    },
+    "hoverToSeeNames": {
+        "fr": "Survolez pour voir les noms",
+        "en": "Hover to see the names"
+    },
+    "lookingAt": {
+        "fr": "Vous observez ce joueur",
+        "en": "You are looking at this player"
+    },
+    "observers": {
+        "fr": "observateurs",
+        "en": "observers"
+    },
+    "youAreObserver": {
+        "fr": "Vous n'êtes pas un joueur!",
+        "en": "You are not a player!"
+    },
+    "observeGame": {
+        "fr": "Observer une partie",
+        "en": "Spectate a game"
+    },
+    "switchChatView": {
+        "fr": "Changer de vue de clavardage",
+        "en": "Switch chat view"
+    },
+    "or": {
+        "fr": "ou",
+        "en": "or"
+    },
+    "userProfile": {
+        "fr": "Profil d'utilisateur",
+        "en": "User Profile"
+    },
+    "chat": {
+        "fr": "Clavardage",
+        "en": "Chat"
+    },
+    "preferences": {
+        "fr": "Préférences",
+        "en": "Preferences"
+    },
+    "disconnect": {
+        "fr": "Se déconnecter",
+        "en": "Disconnect"
+    },
+    "editProfile": {
+        "fr": "Éditer le profil",
+        "en": "Edit profile"
+    },
+    "statistics": {
+        "fr": "Statistiques",
+        "en": "Statistics"
+    },
+    "gameStatistics": {
+        "fr": "Statistiques de partie",
+        "en": "Game statistics"
+    },
+    "connectionStatistics": {
+        "fr": "Statistiques de connexion",
+        "en": "Connection statistics"
+    },
+    "numberOfPlayedGames": {
+        "fr": "Nombre de parties jouées",
+        "en": "Number of played games"
+    },
+    "numberOfWonGames": {
+        "fr": "Nombre de parties gagnées",
+        "en": "Number of won games"
+    },
+    "averageScorePerGame": {
+        "fr": "Score moyen par partie:",
+        "en": "Average score per game: "
+    },
+    "averageTimePerGame": {
+        "fr": "Temps moyen par partie:",
+        "en": "Average time per game:"
+    },
+    "noConnectionStatistics": {
+        "fr": "Aucune statistiques de connexion",
+        "en": "No connection statistics"
+    },
+    "connection": {
+        "fr": "Connexion",
+        "en": "Connection"
+    },
+    "disconnection": {
+        "fr": "Déconnexion",
+        "en": "Disconnection"
+    },
+    "friends": {
+        "fr": "Amis",
+        "en": "Friends"
+    },
+    "leaveChatRoom": {
+        "fr": "Quitter la salle de clavardage",
+        "en": "Leave chat room"
+    },
+    "return": {
+        "fr": "Retour",
+        "en": "Back"
+    },
+    "noMoreLetters": {
+        "fr": "Il n'y a plus de lettres dans le sac!",
+        "en": "No more letters in the bag!"
+    },
+    "cantPlaceOnlyJoker": {
+        "fr": "Le joker ne peut pas être la seule carte sélectionnée!",
+        "en": "Joker can't be the only selected card!"
+    },
+    "myFriends": {
+        "fr": "Mes amis",
+        "en": "My friends"
+    },
+    "delete": {
+        "fr": "Supprimer",
+        "en": "Delete"
+    },
+    "friendRequests": {
+        "fr": "Requêtes d'amis",
+        "en": "Friend requests"
+    },
+    "acceptFriendRequest": {
+        "fr": "Accepter la requête d'ami",
+        "en": "Accept friend request"
+    },
+    "declineFriendRequest": {
+        "fr": "Refuser la requête d'ami",
+        "en": "Decline friend request"
+    },
+    "addAFriend": {
+        "fr": "Ajouter un ami",
+        "en": "Add a friend"
+    },
+    "sendFriendRequest": {
+        "fr": "Envoyer une requête d'amis",
+        "en": "Send friend request"
+    },
+    "noFriends": {
+        "fr": "Aucun ami",
+        "en": "No friend"
+    },
+    "requestSent": {
+        "fr": "Requête envoyée",
+        "en": "Request sent"
+    },
+    "userNotFound": {
+        "fr": "Utilisateur introuvable",
+        "en": "User not found"
+    },
+    "friendRequestError": {
+        "fr": "Impossible d'ajouter cet utilisateur pour une des raisons suivantes : vous êtes déjà amis, le nom entré est le vôtre, ou vous avez déjà envoyé une requête à cet utilisateur",
+        "en": "Impossible to add this user for one of the following reasons: you are already friends, this is your username, or you have already sent a request to this user."
+    },
+    "noPendingFriendRequest": {
+        "fr": "Aucune requête d'amis en attente",
+        "en": "No pending friend request"
+    },
+    "theConversationAlreadyExists": {
+        "fr": "Conversation déjà existante",
+        "en": "The conversation already exists"
+    },
+    "newFriendRequest": {
+        "fr": "Nouvelle requête d'amis",
+        "en": "New friend request"
+    },
+    "theChatroom": {
+        "fr": "Le salon",
+        "en": "The chatroom"
+    },
+    "wasJustDeletedByItsOwner": {
+        "fr": "vient d'être suprimée par son propriétaire",
+        "en": "was just deleted by its owner"
+    },
+    "chatroomCreated": {
+        "fr": "Salon créé",
+        "en": "Chatroom created"
+    },
+    "chatroomDeleted": {
+        "fr": "Salon supprimée",
+        "en": "Chatroom deleted"
+    },
+    "chatroomDeletionError": {
+        "fr": "Erreur lors de la suppression du salon",
+        "en": "Chatroom deletion error"
+    },
+    "noChatroomAvailable": {
+        "fr": "Aucun salon disponible",
+        "en": "No chatroom available"
+    },
+    "youAreAlreadyInChatroom": {
+        "fr": "Vous êtes déjà dans ce salon",
+        "en": "You are already in this chatroom"
+    },
+    "selectLanguage": {
+        "fr": "Changer la langue",
+        "en": "Edit language"
+    }
+}

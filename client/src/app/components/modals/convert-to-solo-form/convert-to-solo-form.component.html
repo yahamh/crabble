@@ -1,0 +1,15 @@
+<mat-dialog-content>
+    <mat-label>{{ this.text('soloGameConfig') }}</mat-label>
+    <br />
+    <mat-form-field>
+        <mat-label>{{ this.text('opponentDifficulty') }}</mat-label>
+        <mat-select [formControl]="botDifficulty">
+            <mat-option matNativeControl required value="easy">{{ this.text('beginner') }}</mat-option>
+            <mat-option matNativeControl required value="hard">{{ this.text('expert') }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button color="primary" (click)="cancel()">{{ this.text('cancel') }}</button>
+    <button mat-button color="primary" [disabled]="!valid" (click)="sendParameter()">{{ this.text('startGame') }}</button>
+</mat-dialog-actions>
